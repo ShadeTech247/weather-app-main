@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Weather app</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand my-3 container d-flex justify-content-between"
+    >
+      <img src="./assets/images/logo.svg" />
+      <div class="dropdown">
+        <a
+          class="btn dropdown-toggle text-light"
+          id="dropdown-button"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <!-- <img src="./assets/images/icon-units.svg" /> -->
+          Units
+          <!-- <img src="./assets/images/icon-dropdown.svg" /> -->
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item text-white" href="#"
+              >Switch to Imperial/Metricn</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Temperature</a>Celsius (°C)
+            Fahrenheit (°F)
+          </li>
+          <li><a class="dropdown-item" href="#">Wind Speed</a>km/h mph</li>
+          <li>
+            <a class="dropdown-item" href="#">Precipitation</a>Millimeters (mm)
+            Inches (in)
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="text-light text-center fw-bolder mt-3 mb-5">
+      How's the sky looking today?
+    </h1>
+    <section class="container">
+      <div class="row justify-content-center mb-5">
+        <form class="d-flex col-5" role="search">
+          <input
+            id="search-input"
+            class="form-control ps-5 me-2"
+            type="search"
+            placeholder="Search for a place..."
+            aria-label="Search"
+          />
+          <button class="btn text-light" id="search-button" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="container d-flex justify-content-between">
+      <main class="col-8">
+        <div
+          class="location-temp border border-2 d-flex justify-content-between"
+        >
+          <div class="my-auto col-3 ms-2">
+            <h3>Berlin,Germany</h3>
+            <p>Tuesday, Aug 5, 2025</p>
+          </div>
+          <div class="col-5 d-flex left">
+            <img
+              src="./assets/images/icon-sunny.webp"
+              class="img-fluid h-50 my-auto"
+              alt=""
+            />
+            <h1 class="my-auto">200</h1>
+          </div>
+        </div>
+        <div class="mt-4 d-grid" id="weather-info-div">
+          <div class="weather-info-box">
+            Feels like
+            <!-- Insert temperature here -->
+            <h5>18</h5>
+          </div>
+          <div class="weather-info-box">
+            Humidity
+            <!-- Insert humidity here -->
+            <h5>46%</h5>
+          </div>
+          <div class="weather-info-box">
+            Wind
+            <!-- Insert wind here -->
+            <h5>14 Km/h</h5>
+          </div>
+          <div class="weather-info-box">
+            Precipitation
+            <!-- Insert precipitation here -->
+            <h5>0 mm</h5>
+          </div>
+        </div>
+        <p class="my-3">Daily forecast</p>
+        <div id="daily-forecast-grid">
+          <div class="daily-weather-info-box text-center">
+            Tue
+            <img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid w-75"
+              alt=""
+            />
+            20* 14*
+          </div>
+          <div class="daily-weather-info-box text-center">
+            Tue
+            <img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid w-75"
+              alt=""
+            />
+            20* 14*
+          </div>
+          <div class="daily-weather-info-box text-center">
+            Tue
+            <img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid w-75"
+              alt=""
+            />
+            20* 14*
+          </div>
+          <div class="daily-weather-info-box text-center">
+            Tue
+            <img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid w-75"
+              alt=""
+            />
+            20* 14*
+          </div>
+          <div class="daily-weather-info-box text-center">
+            Tue
+            <img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid w-75"
+              alt=""
+            />
+            20* 14*
+          </div>
+          <div class="daily-weather-info-box text-center">
+            Tue
+            <img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid w-75"
+              alt=""
+            />
+            20* 14*
+          </div>
+          <div class="daily-weather-info-box text-center">
+            Tue
+            <img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid w-75"
+              alt=""
+            />
+            20* 14*
+          </div>
+        </div>
+        <!-- Insert daily forecast for the next 7 days here -->
+      </main>
+      <aside class="col-5">
+        <div
+          class="w-75 h-100 mx-auto d-flex flex-column justify-content-around"
+          id="hourly-forecast-grid"
+        >
+          <div class="d-flex justify-content-around">
+            <h5 class="my-auto">Hourly forecast</h5>
+            <!-- Insert hourly forecast for the selected day here -->
+            <div class="dropdown">
+              <a
+                class="btn dropdown-toggle text-light"
+                id="dropdown-button"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Tuesday
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Wednesday</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Thursday</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Friday</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Saturday</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Sunday</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Monday</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hourly-weather-info-box">
+            <img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid h-25"
+              alt=""
+            />
+            <p>3pm</p>
+            <p>20*</p>
+          </div>
+          <div class="hourly-weather-info-box "><img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid h-25"
+              alt=""
+            />
+            <p>3pm</p>
+            <p>20*</p></div>
+          <div class="hourly-weather-info-box"><img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid h-25"
+              alt=""
+            />
+            <p>3pm</p>
+            <p>20*</p></div>
+          <div class="hourly-weather-info-box"><img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid h-25"
+              alt=""
+            />
+            <p>3pm</p>
+            <p>20*</p></div>
+          <div class="hourly-weather-info-box"><img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid h-25"
+              alt=""
+            />
+            <p>3pm</p>
+            <p>20*</p></div>
+          <div class="hourly-weather-info-box"><img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid h-25"
+              alt=""
+            />
+            <p>3pm</p>
+            <p>20*</p></div>
+          <div class="hourly-weather-info-box"><img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid h-25"
+              alt=""
+            />
+            <p>3pm</p>
+            <p>20*</p></div>
+          <div class="hourly-weather-info-box"><img
+              src="./assets/images/icon-drizzle.webp"
+              class="img-fluid h-25"
+              alt=""
+            />
+            <p>3pm</p>
+            <p>20*</p></div>
+        </div>
+      </aside>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Abdulsamad Adeosun</a>.
+    </div>
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
