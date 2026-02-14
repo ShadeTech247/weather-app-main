@@ -82,3 +82,8 @@ body{
 .hourly-weather-child-box {
     height: 100%;
 }
+
+.dropdown-menu-bg {
+    background-color: hsl(243, 23%, 24%);
+    color: hsl(250, 6%, 84%);
+}
