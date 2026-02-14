@@ -75,6 +75,8 @@ body{
 }
 .hourly-weather-info-box>p{
     height: 10%;
+    font-size: 1.25rem;
+    margin-right: 0.5em;
 }
 #day-dropdown{
     width: 100%;
@@ -86,4 +88,12 @@ body{
 .dropdown-menu-bg {
     background-color: hsl(243, 23%, 24%);
     color: hsl(250, 6%, 84%);
+    border-radius: 0.5em;
+}
+
+.dropdown-item:hover {
+    background-color: hsl(243, 27%, 20%);
+    width: 95%;
+    border-radius: 0.5em;
+    margin-left: 0.2em;
 }
